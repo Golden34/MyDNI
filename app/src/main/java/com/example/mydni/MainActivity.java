@@ -10,6 +10,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +28,25 @@ public class MainActivity extends AppCompatActivity {
 
     public void calcularDNI(View view) {
         String sDNI = ((EditText)(findViewById(R.id.caja_dni))).getText().toString();
+        sDNI = String.format("%08d",Integer.parseInt(sDNI));
+
+        RadioGroup rBG = ((RadioGroup)(findViewById(R.id.radiogroup_extranjero)));
+        String sRB = ((RadioButton)findViewById(rBG.getCheckedRadioButtonId())).getText().toString();
+        switch (sRB){
+            case "Nacional (sin letra)":  // Nacional
+                //Nothing to do
+                break;
+            case "X":  // X
+                sDNI = "1" + sDNI.substring(1,7);
+                break;
+            case "Y":  // Y
+                sDNI = "2" + sDNI.substring(1,7);
+                break;
+            case "Z":  // Z
+                sDNI = "3" + sDNI.substring(1,7);
+                break;
+        }
+
 
         String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
         int nRest = (Integer.parseInt(sDNI))%23;

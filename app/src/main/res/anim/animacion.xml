@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<set xmlns:android="http://schemas.android.com/apk/res/android">
+
 <set xmlns:android="http://schemas.android.com/apk/res/android">
     <!--
         <translate
             android:duration="3000"
             android:fromYDelta="-50%"
             android:toYDelta="100%"
-            android:repeatCount="2"
+            android:repeatCount="1"
         >
         </translate>
     -->
@@ -14,7 +14,7 @@
             android:duration="3000"
             android:fromDegrees="0"
             android:toDegrees="360"
-            android:repeatCount="2"
+            android:repeatCount="1"
             android:pivotX="25%"
             android:pivotY="75%"
             android:startOffset="100">
@@ -24,7 +24,7 @@
         android:duration="3000"
         android:fromAlpha="1"
         android:toAlpha="1"
-        android:repeatCount="2"/>
+        android:repeatCount="1"/>
 
     <scale
         android:fromXScale="40dp"
@@ -33,5 +33,4 @@
         android:toYScale="350dp"
         />
 
-</set>
 </set>
