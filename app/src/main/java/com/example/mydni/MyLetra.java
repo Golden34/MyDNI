@@ -20,8 +20,8 @@ public class MyLetra extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_letra);
 
-        Intent intent = getIntent();
-        String sletra = intent.getStringExtra("LETRA");
+        //Intent intent = getIntent().getStringExtra();
+        String sletra = getIntent().getStringExtra("LETRA");
         Log.d("MIAPP", "Letra recibida " + sletra);
 
         Toast.makeText(this, "LETRA:  " + sletra, Toast.LENGTH_LONG).show();
